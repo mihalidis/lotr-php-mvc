@@ -15,7 +15,8 @@ At the end of this will be an app with Lord of the rings movies and books and qu
 ### Executing program
 
 ```
-php -S localhost:9001
+php -S localhost:8080 public/index.php
+
 ```
 
 ## License

@@ -19,6 +19,7 @@ class Router
         // the URL matcher takes in the request URI and will check if there is a match with the routes defined in routes/web.php. If there is a match, the function call_user_func_array will do the magic, calling the right method of the right controller.
         //Moreover, we used the function array_walk to cast the numeric values into integer values, because in our class methods we used the explicit type declaration.
         $matcher = new UrlMatcher($routes, $context);
+
         try {
             $matcher = $matcher->match($_SERVER['REQUEST_URI']);
 

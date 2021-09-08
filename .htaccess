@@ -1,6 +1,5 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
-
 # Stop processing if already in the /public directory
 RewriteRule ^public/ - [L]
 
@@ -11,7 +10,3 @@ RewriteRule (.+) public/$1 [L]
 # Route all other requests
 RewriteRule (.*) public/index.php?route=$1 [L,QSA]
 </IfModule>
-
-# Htaccess is a configuration file for the Apache web server. and the mod_rewrite directive tells to Apache that every request will end up to the index.php located in the folder named public.
-# It means that if you browse https://lotr-php-mvc/character/1, https://lotr-php-mvc/page2 or https://lotr-php-mvc/page3, all of them will end up in the index.php under public, that is the entry point of your PHP MVC framework
-# This is a big advantage because you can now handle your request in one place, understand what resource is requested and provide the right response.

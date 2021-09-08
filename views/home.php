@@ -17,7 +17,7 @@
 <section>
     <h1>Homepage</h1>
     <p>
-        <a href="<?php echo $routeToCharacter ?>">Check the first character</a>
+        <a href="#">Check the first character</a>
     </p>
     <section>
 

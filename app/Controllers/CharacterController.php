@@ -3,16 +3,33 @@
 namespace App\Controllers;
 
 use App\Models\Character;
+use App\Models\Apimodel;
 use Symfony\Component\Routing\RouteCollection;
 
 class CharacterController
 {
-    // Show the product attributes based on the id.
-    public function showAction(int $id, RouteCollection $routes)
+    // getting character infos from API
+    public function showCharacters(RouteCollection $routes)
     {
-        $character = new Character();
-        $character->read($id);
+        $charactersApi = new Apimodel();
 
-        require_once APP_ROOT . '/views/character.php';
+        $lotrCharacters = $charactersApi->getCharacters();
+
+        $characterDetails = [];
+
+        foreach ($lotrCharacters["docs"] as $character){
+            $characterNew = new Character();
+
+            $characterNew->setName($character['name']);
+            $characterNew->setRace($character['race']);
+            $characterNew->setRealm($character['realm']);
+
+            if($characterNew->getRace() != '' || $characterNew->getRace() != NULL) {
+                $characterDetails[] = $characterNew;
+            }
+
+        }
+
+        require_once APP_ROOT . '/views/characters.php';
     }
 }

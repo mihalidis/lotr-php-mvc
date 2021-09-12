@@ -14,10 +14,10 @@ At the end of this will be an app with Lord of the rings movies and books and qu
 
 ### Executing program
 
-```
-php -S localhost:8080 public/index.php
 
-```
+* Put your main project folder into the C:\wamp64\www
+* Enter http://localhost/lotr-php-mvc/ address to your browser for using Apache server
+
 
 ## License
 

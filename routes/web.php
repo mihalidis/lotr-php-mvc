@@ -5,5 +5,12 @@ use Symfony\Component\Routing\RouteCollection;
 
 // Routes system (We use Route and RouteCollection classes from the Symfony Routing component in order to create and list all the routes we need.)
 $routes = new RouteCollection();
-$routes->add('home', new Route(constant('URL_SUBFOLDER') . '/', array('controller' => 'PageController', 'method'=>'indexAction'), array()));
-$routes->add('character', new Route(constant('URL_SUBFOLDER') . '/character/{id}', array('controller' => 'CharacterController', 'method'=>'showAction'), array('id' => '[0-9]+')));
+$routes->add('homepage', new Route(constant('URL_SUBFOLDER') . '/', array('controller' => 'PageController', 'method'=>'indexAction'), array()));
+
+$routes->add('characters', new Route(constant('URL_SUBFOLDER') . '/characters', array('controller' => 'CharacterController', 'method'=>'showCharacters'), array()));
+
+$routes->add('books', new Route(constant('URL_SUBFOLDER') . '/books', array('controller' => 'BookController', 'method'=>'showBooks'), array()));
+
+$routes->add('movies', new Route(constant('URL_SUBFOLDER') . '/movies', array('controller' => 'MovieController', 'method'=>'showMovies'), array()));
+
+$routes->add('quotes', new Route(constant('URL_SUBFOLDER') . '/quotes', array('controller' => 'QuoteController', 'method'=>'showQuotes'), array()));

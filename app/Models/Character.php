@@ -3,6 +3,11 @@ namespace App\Models;
 
 class Character
 {
+    const CHARACTER_RACE = [
+        'Human','Elf','Hobbit','Dwarf','Maiar','Ent','Orcs','Dragon','Great Spiders','Black Uruk','Ainur','God','Men','Half-elven','Goblin','Orc','Balrogs'
+    ];
+
+
     protected $id;
     protected $name;
     protected $race;
@@ -35,18 +40,25 @@ class Character
         $this->name = $name;
     }
 
-    public function setDescription(string $race)
+    public function setRace(string $race)
     {
-        $this->race = $race;
+        if(in_array(explode(",",$race)[0], self::CHARACTER_RACE)) {
+            $this->race = $race;
+        }
     }
 
-    public function setPrice(string $realm)
+    public function setRealm(string $realm)
     {
-        $this->realm = $realm;
+        if($realm == '' || $realm == NULL || $realm == 'NaN') {
+            $this->realm = "Unknown Realmapp";
+        } else {
+            $this->realm = $realm;
+        }
+
     }
 
     // CRUD OPERATIONS
-    public function create(array $data)
+/*    public function create(array $data)
     {
 
     }
@@ -68,5 +80,5 @@ class Character
     public function delete(int $id)
     {
 
-    }
+    }*/
 }

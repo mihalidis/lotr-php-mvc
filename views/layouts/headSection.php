@@ -10,7 +10,8 @@ $header = "Lord of The Rings App";
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
-    <title>Carousel Template · Bootstrap v5.1</title>
+    <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAADDxoAD++8QAafLQAAlCcAAxfowABTZQAFm2tAA1gmAAEaq4ABna+AAR5vgAcg8IAAkiSAC+35QAIaqYAK5XJACqh2QBL1/4AAne8ADSl3gA5tugAAVadAAd0tAAYk9AAE2isAEXE8gAlmNIAA3K6ADCf1wACVJsAIp7jAAJwuAABY6sABmCrAAtjmgAFVakAI37BAAhrpQAqpt0ARMP2ABR1sgAEZaYAAn3GAAaEywAWbbAAD3W7AEnP/gAShsUAM6HbAANzuQAKaKYAC2imAEK88gAzo94ANaPeAEK/8gACYaoAOb7tAAFHkAAwnNEAAkeQADGe3ABBxfIAN6XhAB10tgAEVJUAO6/mABBxtwADTKQADWOlAAZnswAFcbgAAV2mAB10twAJd8AACmadAARzuwAMYJUAD4TNAEfD+QARbrAAF4a/ABNusAAdjcQAEXu1AAZ4vgAHb64AKpfRAErT/gA6uuoAJpHBABFqowAHUJoABXnEAEa68gAroNkAKIjKADq87QAJYpkAA2+3AABVnQA3uOgABWanAGPR+wAVZ6wAOq3mAABDjgAMZ5wADmq9AAFTmwALe78ADWOXAEPA8wArktAAF2WqABx8vAAEZ7YAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQ9RTtdTxQAAAAAAAAAFAQNayRtc3MfEQAAAAAAIE1HIi5cB0olYQ4RAAAAFyZzTghGQXJDFWY4NQAACURMD0gZHQAAAAAAZW5ZADRXCyEMAAAAAAAAABYKWx4sEwZYAAAAAAAAABxLMlR1K0InAAAAAAAAAFIzMmNaXmdRAAAAAAAAAAEjViowAGRwUgAAAAAAUjlSVW8pAABJVxRTUlIFaS0DYBh0AAAAAGxxPzo2Pjw8EBtgAAAAAAAAEigaakA3MRRiAAAAAAAAAAACL1BoXwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAD8BwAA8AMAAOABAADAAQAAgPgAAIP4AAAH8AAAD+AAAB/BAAAfAwAAAAcAAIAPAADAHwAA4P8AAP//AAA=" rel="icon" type="image/x-icon" />
+    <title>Lord of the rings app</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/carousel/">
 
@@ -20,8 +21,9 @@ $header = "Lord of The Rings App";
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="public/assets/css/carousel.css" >
-    <link rel="stylesheet" href="public/assets/css/main.css" >
+    <link rel="stylesheet" href="public/assets/css/carousel.css">
+    <link rel="stylesheet" href="public/assets/css/main.css">
+    <link rel="stylesheet" href="public/assets/css/signin.css">
 </head>
 <body>
 
@@ -55,9 +57,9 @@ $header = "Lord of The Rings App";
                 </ul>
                 <form class="d-flex">
                     <!--  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
-                    <button class="btn btn-outline-success auth-button" type="submit">Login</button>
-                    <button class="btn btn-outline-success auth-button" type="submit">Register</button>
-                    <button class="btn btn-outline-success auth-button" type="submit">Logout</button>
+                    <a class="btn btn-outline-success auth-button" type="submit">Login</a>
+                    <a class="btn btn-outline-success auth-button" type="submit" href="<?php echo $routes->get('register')->getPath() ?>">Register</a>
+                    <a class="btn btn-outline-success auth-button" type="submit">Logout</a>
                 </form>
             </div>
         </div>

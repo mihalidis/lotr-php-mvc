@@ -14,3 +14,6 @@ $routes->add('books', new Route(constant('URL_SUBFOLDER') . '/books', array('con
 $routes->add('movies', new Route(constant('URL_SUBFOLDER') . '/movies', array('controller' => 'MovieController', 'method'=>'showMovies'), array()));
 
 $routes->add('quotes', new Route(constant('URL_SUBFOLDER') . '/quotes', array('controller' => 'QuoteController', 'method'=>'showQuotes'), array()));
+
+// auth pages
+$routes->add('register', new Route(constant('URL_SUBFOLDER') . '/register', array('controller' => 'UserController', 'method'=>'registerUser'), array()));

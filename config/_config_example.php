@@ -21,3 +21,6 @@ define('DB_NAME', 'your-db-name');
 
 //API Keys
 define('API_KEY', 'your-api-key');
+
+//SALT
+define('SALT_PWD', 'your salt key');

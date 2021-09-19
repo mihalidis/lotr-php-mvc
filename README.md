@@ -15,7 +15,8 @@ At the end of this will be an app with Lord of the rings movies and books and qu
 ### Executing program
 
 
-* Put your main project folder into the C:\wamp64\www
+* If you are using [wampserver](https://www.wampserver.com/en/) Put your main project folder, under the C:\wamp64\www folder.
+* * If you are using [xamppserver](https://www.apachefriends.org/tr/index.html) Put your main project folder, under the C:\xampp\htdocs folder.
 * Enter http://localhost/lotr-php-mvc/ address to your browser for using Apache server
 
 

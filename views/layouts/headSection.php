@@ -57,7 +57,7 @@ $header = "Lord of The Rings App";
                 </ul>
                 <form class="d-flex">
                     <!--  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
-                    <a class="btn btn-outline-success auth-button" type="submit">Login</a>
+                    <a class="btn btn-outline-success auth-button" type="submit" href="<?php echo $routes->get('login')->getPath() ?>">Login</a>
                     <a class="btn btn-outline-success auth-button" type="submit" href="<?php echo $routes->get('register')->getPath() ?>">Register</a>
                     <a class="btn btn-outline-success auth-button" type="submit">Logout</a>
                 </form>

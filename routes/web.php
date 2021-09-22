@@ -17,3 +17,4 @@ $routes->add('quotes', new Route(constant('URL_SUBFOLDER') . '/quotes', array('c
 
 // auth pages
 $routes->add('register', new Route(constant('URL_SUBFOLDER') . '/register', array('controller' => 'UserController', 'method'=>'registerUser'), array()));
+$routes->add('login', new Route(constant('URL_SUBFOLDER') . '/login', array('controller' => 'UserController', 'method'=>'loginUser'), array()));

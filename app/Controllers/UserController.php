@@ -9,10 +9,15 @@ class UserController  {
 
     public function registerUser(RouteCollection $routes) {
         if($_SERVER['REQUEST_METHOD'] == "POST") {
+
             $user = new User();
-            $create_user = $user->create($_POST);
+
+            $create_user = $user->createUser($_POST);
+
             if($create_user) {
+
                 $last_id = $user->connect()->lastInsertId();
+
                 require_once APP_ROOT . '/views/home.php';
             }
         } else {
@@ -22,6 +27,23 @@ class UserController  {
 
 
     public function loginUser(RouteCollection $routes) {
-        require_once APP_ROOT . '/views/login.php';
+        if($_SERVER['REQUEST_METHOD'] == "POST") {
+
+            $user = new User();
+
+            $loginUser = $user->readUser($_POST);
+
+            if ($loginUser === true) {
+
+                require_once APP_ROOT . '/views/home.php';
+
+            } else {
+
+                require_once APP_ROOT . '/views/login.php';
+
+            }
+        } else {
+            require_once APP_ROOT . '/views/login.php';
+        }
     }
 }
